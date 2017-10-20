@@ -1,7 +1,7 @@
 from django.db import models # plus other files
 from django.utils import timezone
 
-
+#데이터 관리 
 #class : define object  #Post : name of model
 class Post(models.Model): # define models, model is object
 	author = models.ForeignKey('auth.User')

@@ -5,19 +5,15 @@
 	</head>
 	<body>
 		<div>
-			<h1><a href="https://www.facebook.com/profile.php?id=100014350666563">Abel's Facebook</a></h1>
+			<h1><a href="/">Abel's Blog</a></h1>
 		</div>
 
-		<div>
-			<p>published: 20.10.2017, 12:14</p>
-			<h2><a href="https://github.com/livelikeabel">My first github</a></h2>
-			<p>GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build ...</p>
-		</div>
-
-		<div>
-			<p>published: 20.10.2017, 12:14</p>
-			<h2><a href="https://www.instagram.com/mad.fisherman/">Mad.fisherman</a></h2>
-			<p>My first start-up is "Mad.fisherman" we make poke(hawaiian traditional food) It is very fast, and healthy food. we use only fresh salmon from Norway. If you want taste poke, come and eat!</p>
-		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 	</body>
 </html>
